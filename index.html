@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tik tak toe</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+          background-color: pink;
+            text-align: center;
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            
+        }
+
+        .game {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 83vmin;
+            height: 80%
+        }
+
+        .box {
+            width: 31%;
+            height: 33%;
+            border-radius: 3px;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+            font-size: 10vmin;
+            background-color: lavender ;
+            color: blue;
+        }
+        .reset{
+            height: 60px;
+            width: 100px;
+            border-radius: 12px;
+            border: none;
+            background-color: black;
+            color: aliceblue;
+            font-size: larger;
+            font-weight: bold;
+        }
+        .but{
+            margin-top: 20x;
+
+        }
+        #butt{
+            
+            background-color: lavender;
+color: black;
+box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+            padding: 20px;
+        }
+        .new{
+            height: 60px;
+            width: 150px;
+            border-radius: 12px;
+            border: none;
+            background-color: lavender;
+            color: black;
+            font-size: larger;
+            font-weight: bold;
+        }
+        .msg-container{
+            color: black;
+            margin-top: 35px;
+            font-size: 40px;
+        }
+        .hide{
+            display: none;
+        }
+        .heading{
+            max-width: 750px;
+            margin: 0 auto;
+            background-color: lavender;
+          margin-top: 40px;
+          border-radius: 12px;
+        
+        }
+        #ree{
+            height: 60px;
+            width: 150px;
+            border-radius: 12px;
+            border: none;
+            background-color: lavender;
+            color: black;
+            font-size: larger;
+            font-weight: bold;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+        }
+        #ree:hover{
+            box-shadow: black;
+        }
+        .but{
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+        /* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+}
+button {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+button::before {
+  margin-left: auto;
+}
+
+button::after, button::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  transition: 0.5s;
+}
+
+button:hover::after, button:hover::before {
+  width: 100%;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #37FF8B;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+    </style>
+</head>
+
+<body>
+    <div class="msg-container hide" id="kia" >
+        <p class="azib" id="kia2"> </p>
+    </div>
+    <main>
+      <div class="head-cont">  <h1 class="heading">Tik Tac Toe Game</h1></div>
+       
+        <div class="container">
+            <div class="game">
+                <button class="box">
+                    
+                </button>
+                <button class="box">
+                    
+
+                </button>
+                <button class="box">
+
+                </button>
+                <button class="box">
+
+                </button>
+                <button class="box">
+
+                </button><button class="box">
+
+                </button><button class="box">
+
+                </button><button class="box">
+
+                </button>
+                <button class="box"></button>
+            </div>
+
+        </div>
+        
+    </main>
+   <div class="but"> <button  id="ree" onclick="reset1()">Reset</button>
+    <button class="new" id="butt" onclick="reset1()">New Game</button>
+ 
+</div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
